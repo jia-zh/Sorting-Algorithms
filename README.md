@@ -1,4 +1,4 @@
-# Common Sorting Algorithms
+# Sorting Algorithms
 
 查找和排序算法是算法的入门知识，其经典思想可以用于很多算法当中。因为其实现代码较短，应用较常见，所以在面试中经常会问到排序算法及其相关的问题。但万变不离其宗，只要熟悉了思想，灵活运用也不是难事。**一般在面试中最常考的是快速排序和归并排序**，并且经常有面试官要求现场写出这两种排序的代码，对这两种排序的代码一定要信手拈来才行。还有**插入排序、冒泡排序、堆排序、基数排序、桶排序**等，面试官对于这些排序可能会要求比较各自的优劣、各种算法的思想及其使用场景，并分析算法的时间和空间复杂度。通常查找和排序算法的考察是面试的开始，如果这些问题回答不好，估计面试官都没有继续面试下去的兴趣都没了，所以想开个好头就要把常见的排序算法思想及其特点要熟练掌握，有必要时要熟练写出代码。
   
@@ -192,7 +192,7 @@ public class MergetSort {
 堆排序主要是将待排序的数组组织成为一种成为“堆”的数据结构（注意，这里说的堆一般是指二叉堆），利用堆的性质进行排序，堆分为最大堆和最小堆，最大堆的性质是父母节点的值都大于孩子节点的值，最小堆则相反。堆排序的过程主要包括堆的构建和堆的调整两部分，其时间复杂度为\(O(nlog n)\)。
 
 **代码实现：**
-```
+```java
 /**
  * @Description: 堆排序
  * @ClassName: HeapSort
@@ -259,7 +259,7 @@ public class HeapSort {
 
 
 **代码实现：**
-```
+```java
 /**
  * @Description: 快速排序
  * @ClassName: QuickSort
@@ -304,7 +304,7 @@ public class QuickSort {
 ![](https://raw.githubusercontent.com/jia-zh/Common-Sorting-Algorithms/master/images/2017110807.png)
 
 **代码实现：**
-```
+```java
 /**
  * @Description: 希尔排序
  * @ClassName: ShellSort
@@ -398,7 +398,7 @@ public class CountSort {
 ![](https://raw.githubusercontent.com/jia-zh/Common-Sorting-Algorithms/master/images/2017110809.png)
 
 **代码实现：**
-```
+```java
 /**
  * @Description: 桶排序
  * @ClassName: BucketSort
@@ -482,7 +482,7 @@ class Node {
 接下来，可以对十位数、百位数也按照这种方法进行排序，最后就能得到排序完成的序列。
 
 **代码实现：**
-```
+```java
 /**
  * @Description: 基数排序
  * @ClassName: RadixSort
