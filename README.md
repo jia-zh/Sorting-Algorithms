@@ -20,7 +20,8 @@
 ### 冒泡排序
   
 冒泡排序是最简单的排序之一了，其大体思想就是**通过与相邻元素的比较和交换来把小的数交换到最前面**。这个过程类似于水泡向上升一样，因此而得名。
-  
+![](https://github.com/jia-zh/Sorting-Algorithms/blob/master/images/bubblesort.gif)
+
 举个例子，对5,3,8,6,4这个无序序列进行冒泡排序。首先从后向前冒泡，4和6比较，把4交换到前面，序列变成5,3,8,4,6。同理4和8交换，变成5,3,4,8,6，3和4无需交换，5和3交换，变成3,5,4,8,6,3。这样一次冒泡就完了，把最小的数3排到最前面了。对剩下的序列依次冒泡就会得到一个有序序列。冒泡排序的时间复杂度为\(O(n^2)\)。
 
 **实现代码：**
@@ -67,7 +68,8 @@ public class BubbleSort {
 ### 选择排序
   
 选择排序的思想其实和冒泡排序有点类似，都是在一次排序后把最小的元素放到最前面，但是过程不同，**冒泡排序是通过相邻的比较和交换，而选择排序是通过对整体的选择**。
-  
+![](https://github.com/jia-zh/Sorting-Algorithms/blob/master/images/selectsort.gif)
+
 举个例子，对5,3,8,6,4这个无序序列进行简单选择排序，首先要选择5以外的最小数来和5交换，也就是选择3和5交换，一次排序后就变成了3,5,8,6,4。对剩下的序列一次进行选择和交换，最终就会得到一个有序序列。其实选择排序可以看成冒泡排序的优化，因为其目的相同，只是选择排序只有在确定了最小数的前提下才进行交换，大大减少了交换的次数。选择排序的时间复杂度为\(O(n^2)\)。
 
 **实现代码：**
@@ -101,7 +103,8 @@ public class SelectSort {
 ### 插入排序
   
 **插入排序不是通过交换位置而是通过比较找到合适的位置插入元素来达到排序的目的的**。相信大家都有过打扑克牌的经历，特别是牌数较大的，在分牌时可能要整理自己的牌，牌多的时候怎么整理呢？就是拿到一张牌，找到一个合适的位置插入，这个原理其实和插入排序是一样的。
-  
+![](https://github.com/jia-zh/Sorting-Algorithms/blob/master/images/insertsort.gif)
+
 举个例子，对5,3,8,6,4这个无序序列进行简单插入排序，首先假设第一个数的位置时正确的，想一下在拿到第一张牌的时候，没必要整理，然后3要插到5前面，把5后移一位，变成3,5,8,6,4，然后8不用动，6插在8前面，8后移一位，4插在5前面，从5开始都向后移一位。注意在插入一个数的时候要保证这个数前面的数已经有序。简单插入排序的时间复杂度也是\(O(n^2)\)。
 
 **实现代码：**
@@ -133,10 +136,7 @@ public class InsertSort {
   
 **归并排序是一种分治的思想**，一个数组的排序可以看作数组前面排好序的一部分和后面排好序的一部分进行合并，对于前面的一部分，我们又可以划分为两个部分分别排序，依次递归，直至划分为一个元素为止。归并排序的时间复杂度为\(O(nlog n)\)。
 
-举例：输入数组5,2,4,7,1,3,2,6
-
-归并排序的步骤如下如所示：
-![](https://raw.githubusercontent.com/jia-zh/Common-Sorting-Algorithms/master/images/2017110801.png)
+![](https://github.com/jia-zh/Sorting-Algorithms/blob/master/images/mergetsort.png)
 
 **代码实现：**
 ```java
@@ -192,7 +192,7 @@ public class MergetSort {
 堆排序主要是将待排序的数组组织成为一种成为“堆”的数据结构（注意，这里说的堆一般是指二叉堆），利用堆的性质进行排序，堆分为最大堆和最小堆，最大堆的性质是父母节点的值都大于孩子节点的值，最小堆则相反。堆排序的过程主要包括堆的构建和堆的调整两部分，其时间复杂度为\(O(nlog n)\)。
 
 **代码实现：**
-```java
+```
 /**
  * @Description: 堆排序
  * @ClassName: HeapSort
@@ -259,7 +259,7 @@ public class HeapSort {
 
 
 **代码实现：**
-```java
+```
 /**
  * @Description: 快速排序
  * @ClassName: QuickSort
@@ -304,7 +304,7 @@ public class QuickSort {
 ![](https://raw.githubusercontent.com/jia-zh/Common-Sorting-Algorithms/master/images/2017110807.png)
 
 **代码实现：**
-```java
+```
 /**
  * @Description: 希尔排序
  * @ClassName: ShellSort
@@ -398,7 +398,7 @@ public class CountSort {
 ![](https://raw.githubusercontent.com/jia-zh/Common-Sorting-Algorithms/master/images/2017110809.png)
 
 **代码实现：**
-```java
+```
 /**
  * @Description: 桶排序
  * @ClassName: BucketSort
@@ -482,7 +482,7 @@ class Node {
 接下来，可以对十位数、百位数也按照这种方法进行排序，最后就能得到排序完成的序列。
 
 **代码实现：**
-```java
+```
 /**
  * @Description: 基数排序
  * @ClassName: RadixSort
